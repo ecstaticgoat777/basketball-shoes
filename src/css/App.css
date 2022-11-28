@@ -26,7 +26,7 @@
     margin: 4rem 0rem 2.5rem 4rem;
     font-family: 'Roboto', sans-serif;
     font-weight: 1000;
-    font-size: 8vw;
+    font-size: 6vw;
     text-transform: uppercase;
 }
 
@@ -61,4 +61,21 @@
     margin-left: auto;
     text-transform: uppercase;
     font-weight: 700;
+}
+
+.reset {
+    text-transform: uppercase;
+    margin: 1rem;
+    padding: 0.5rem;
+    font-weight: 900;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    color: #000000;
+    border-radius: 0.5rem;
+    border-color: #000000;
+}
+
+.reset:hover {
+    background-color: #000000;
+    color: #FFFFFF;
 }

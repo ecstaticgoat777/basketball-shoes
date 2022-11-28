@@ -24,7 +24,7 @@ export default function ShoeItem(props) {
             setButtonText("Add To Favorites")
             setFav(false);
         }
-        props.handleFavs({key: props.shoe.name, name: props.shoe.name, price: props.shoe.price})
+        props.handleFavs({key: props.shoe.name, name: props.shoe.name, price: props.shoe.price});
     }
 
     return (
@@ -36,7 +36,7 @@ export default function ShoeItem(props) {
                     <Card.Text className="shoe-card-text">{props.shoe.brand}</Card.Text>
                     <Card.Text className="shoe-card-text">{props.shoe.sport}</Card.Text>
                     <Card.Text className="shoe-card-text">{props.shoe.gender}</Card.Text>
-                    <Card.Text className="shoe-card-text">{props.shoe.rating}</Card.Text>
+                    <Card.Text className="shoe-card-text">RATING: {props.shoe.rating}</Card.Text>
                     <Card.Text className="shoe-card-text">${props.shoe.price.toFixed(2)}</Card.Text>
                     <button className="fav-button" onClick={changeText} style={{backgroundColor: isFav ? '#FCB209': '#073F4E'}}>{buttonText}</button>
                 </Card.Body>

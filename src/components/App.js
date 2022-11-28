@@ -7,7 +7,7 @@ import '../css/Reset.css';
 import ShoeItem from './ShoeItem';
 import FavoritesList from './FavoritesList';
 import Sort from './Sort';
-import Filter from './FilterCategory'
+import FilterCategory from './FilterCategory'
 
 
 function App() {
@@ -16,9 +16,7 @@ function App() {
   const [allItems, setAllItems] = useState(shoeData);
   const [items, setItems] = useState(shoeData);
   const [filterData, setFilterData] = useState(shoeFilterData);
-  const [sortType, setSortType] = useState("rating"); // default sort by rating
-  //const [filterGroups, setFilterGroups] = useState([]);
-  // work in progress
+  const [sortType, setSortType] = useState("rating"); // default sort by rating/popular
   const [filters, setFilters] = useState([]);
 
   // for each item, loops through all the filters
@@ -28,14 +26,17 @@ function App() {
     allItems.forEach(shoe => {
       let displayItem = true
       newFilters.forEach(f => {
-        if (!shoe[f.category.toLowerCase()].includes(f.name)) {
+        if (f.name.toLowerCase() === "favorites") {
+          if (!favs.some(fav => fav.name == shoe.name))
+            displayItem = false;
+        } else if (!shoe[f.category.toLowerCase()].includes(f.name)) {
           displayItem = false;
         }})
       if (displayItem) {
         filteredItems.push(shoe);
       }
     })
-    setItems(filteredItems)
+    //setItems(filteredItems)
     return filteredItems;
   }
 
@@ -51,11 +52,11 @@ function App() {
     setItems(getFilteredItems(newFilters));
   }
 
-  const createFilterGroup = (groupInfo) => {
-    return <Filter key={groupInfo.title} title={groupInfo["title"]} options={groupInfo["options"]} filterItems={filterItems} />
+  const createFilterCategory = (groupInfo) => {
+    return <FilterCategory key={groupInfo.title} title={groupInfo["title"]} options={groupInfo["options"]} filterItems={filterItems} filterList={filters} />
   }
 
-  const filterGroups = filterData.map(createFilterGroup);
+  const filterGroups = filterData.map(createFilterCategory);
 
   useEffect(() => {
     const toggleSort = type => {
@@ -88,6 +89,10 @@ function App() {
       setTotal(total + item.price); // increment total
     }
     setFavs(newFavs); // update favs
+    // console.log(filters)
+    // if (filters.some(filt => filt.name == "Favorites")) {
+    //   setItems(getFilteredItems([...filters]))
+    // }
   }
 
   const visibleItems = items.map((item, index) => (
@@ -102,7 +107,6 @@ function App() {
 
 
 const reset = () => {
-  // TODO: loop through filters and visually change checkbox
   setFilters([]);
   setItems(allItems);
 }
@@ -115,9 +119,9 @@ const reset = () => {
 
           <div className="bar">
             <div className="side-bar">
-              <button onClick={reset}>Revert</button>
               <Sort setSortType={setSortType}/>
               {filterGroups}
+              <button className="reset" onClick={reset}>Reset Filters</button>
             </div>
           </div>
 

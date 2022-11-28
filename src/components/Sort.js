@@ -4,12 +4,13 @@ import RadioGroup from '@mui/material/RadioGroup';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import FormControl from '@mui/material/FormControl';
 import FormLabel from '@mui/material/FormLabel';
+import '../css/Sort.css';
   
 export default function Sort(props) {
     return (
-        <div style={{ padding: 25 }}>
+        <div className="sort-group">
             <FormControl>
-                <FormLabel id="sort-group">
+                <FormLabel id="sort-heading">
                     Sort By
                 </FormLabel>
                 <RadioGroup
