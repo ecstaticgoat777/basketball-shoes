@@ -1,0 +1,64 @@
+.ShoeList {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.App {
+    position: relative;
+}
+
+.bar {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 4rem;
+}
+.shoe-body {
+    display: flex;
+}
+.shoe-gallery {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.heading {
+    margin: 4rem 0rem 2.5rem 4rem;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+    font-size: 8vw;
+    text-transform: uppercase;
+}
+
+.side-bar {
+    display: flex;
+    flex-direction: column;
+    border: 2.5px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px #eeeeee;
+}
+
+.fav-heading {
+    text-transform: uppercase;
+    font-weight: 700;
+    text-align: center;
+}
+.fav-bar {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    border: 2.5px solid #000000;
+    border-radius: 10px;
+    box-shadow: 0 2px 20px #eeeeee;
+    margin-left: 2rem;
+    margin-right: 4rem;
+    padding: 1rem;
+    width: 15vw;
+}
+
+.total {
+    display: flex;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+}

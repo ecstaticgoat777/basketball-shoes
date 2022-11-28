@@ -1,0 +1,36 @@
+
+.shoe-card-body {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+}
+.Img {
+    height: 15rem;
+    width: 15rem;
+}
+
+.shoe-card-title {
+    font-weight: 700;
+    padding: 0.2rem;
+}
+.shoe-card-text {
+    padding: 0.2rem;
+}
+
+.fav-button {
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 1000;
+    text-transform: uppercase;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer
+}
+
+.fav-button:hover {
+    transform: scale(1.05);
+}

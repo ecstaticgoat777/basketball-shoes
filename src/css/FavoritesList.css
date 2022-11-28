@@ -1,0 +1,14 @@
+.fav-entry {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.4rem 0rem 0rem 0rem;
+    margin-left: 0.5rem;
+}
+
+.fav-text {
+    display: list-item;
+    list-style-type: disc;
+    padding: 0.4rem 0rem 0rem 0rem;
+    margin-left: 0.5rem;
+}

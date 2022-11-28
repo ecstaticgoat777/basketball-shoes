@@ -1,0 +1,122 @@
+[
+    {
+        "name": "LeBron XX",
+        "brand": "Nike",
+        "sport": "Basketball",
+        "gender": "Male",
+        "price": 200,
+        "rating": 4.5,
+        "color": ["Purple"],
+        "image": "images/bball-nike-m-lebron.png"
+    },
+    {
+        "name": "KD 15",
+        "brand": "Nike",
+        "sport": "Basketball",
+        "gender": "Male",
+        "price": 150,
+        "rating": 4.8,
+        "color": ["Black"],
+        "image": "images/bball-nike-m-kd.png"
+    },
+    {
+        "name": "Unisex Curry Flow 10",
+        "brand": "Under Armour",
+        "sport": "Basketball",
+        "gender": "Unisex",
+        "price": 160,
+        "rating": 4.3,
+        "color": ["Black", "Orange"],
+        "image": "images/bball-ua-u-curry.png"
+    },
+    {
+        "name": "Nike Air Deldon Be True",
+        "brand": "Nike",
+        "sport": "Basketball",
+        "gender": "Female",
+        "price": 120,
+        "rating": 5.0,
+        "color": ["Rainbow", "Green"],
+        "image": "images/bball-nike-f.png"
+    },
+    {
+        "name": "UA Flow Breakthru 3",
+        "brand": "Under Armour",
+        "sport": "Basketball",
+        "gender": "Female",
+        "price": 120,
+        "rating": 4.6,
+        "color": ["Black"],
+        "image": "images/bball-ua-f.png"
+    },
+    {
+        "name": "Giannis Immortality",
+        "brand": "Nike",
+        "sport": "Basketball",
+        "gender": "Unisex",
+        "price": 58.97,
+        "rating": 3.6,
+        "color": ["Pink", "Blue"],
+        "image": "images/bball-nike-u-giannis.png"
+    },
+    {
+        "name": "Invincible Run 2",
+        "brand": "Nike",
+        "sport": "Running",
+        "gender": "Male",
+        "price": 144.97,
+        "rating": 4.7,
+        "color": ["Off-white"],
+        "image": "images/run-nike-m.png"
+    },
+    {
+        "name": "Invincible Run Flyknit 2",
+        "brand": "Nike",
+        "sport": "Running",
+        "gender": "Female",
+        "price": 180,
+        "rating": 4.1,
+        "color": ["Blue", "Green"],
+        "image": "images/run-nike-f.png"
+    },
+    {
+        "name": "Nike Pegasus 39",
+        "brand": "Nike",
+        "sport": "Running",
+        "gender": "Male",
+        "price": 130,
+        "rating": 4.9,
+        "color": ["Gray"],
+        "image": "images/run-nike-m-2.png"
+    },
+    {
+        "name": "Nike Streakfly",
+        "brand": "Nike",
+        "sport": "Running",
+        "gender": "Unisex",
+        "price": 160,
+        "rating": 2.9,
+        "color": ["Orange"],
+        "image": "images/run-nike-u.png"
+    },
+    {
+        "name": "UA Charged Assert 9",
+        "brand": "Under Armour",
+        "sport": "Running",
+        "gender": "Male",
+        "price": 56.25,
+        "rating": 4.0,
+        "color": ["Gray"],
+        "image": "images/run-ua-m.png"
+    },
+    {
+        "name": "UA HOVR Infinite 4",
+        "brand": "Under Armour",
+        "sport": "Running",
+        "gender": "Male",
+        "price": 120,
+        "rating": 3.9,
+        "color": ["Yellow"],
+        "image": "images/run-ua-m-2.png"
+    }
+]

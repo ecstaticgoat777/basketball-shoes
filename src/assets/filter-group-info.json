@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Gender",
+        "options": ["Male", "Female", "Unisex"]
+    },
+    {
+        "title": "Sport",
+        "options": ["Basketball", "Running"]
+    },
+    {
+        "title": "Brand",
+        "options": ["Nike", "Under Armour"]
+    },
+    {
+        "title": "Color",
+        "options": ["Black", "Gray", "White", "Off-White", "Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink", "Rainbow"]
+    },
+    {
+        "title": "Other",
+        "options": ["Favorites"]
+    }
+]
