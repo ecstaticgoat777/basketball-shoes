@@ -22,7 +22,9 @@ export default function FilterItem(props) {
     
     return (
         <FormControlLabel 
-            control={<Checkbox checked={checked} onChange={() => handleChange()} value={props.option} />} 
+            control={<Checkbox checked={checked} onChange={() => handleChange()} value={props.option} style ={{
+                color: "#000000",
+              }} />} 
             key={props.option}
             label={props.option}
         />

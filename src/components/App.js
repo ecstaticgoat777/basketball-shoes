@@ -83,20 +83,24 @@ function App() {
       // fav exists -> remove from fav list 
       newFavs.splice(itemIndex, 1);
       setTotal(total - item.price); // decrement total
+
+      // if filtering by favs and item is no longer a fav, remove it from items
+      if (filters.some(filt => filt.name == "Favorites")) {
+        const copyItems = [...items];
+        const itemLoc = copyItems.findIndex(i => i.name === item.name )
+        copyItems.splice(itemLoc, 1);
+        setItems(copyItems);
+      }
     } else {
       // fav does not exist -> add to fav list
       newFavs = ([...newFavs, {key: item, name: item.name, price: item.price}]);
       setTotal(total + item.price); // increment total
     }
     setFavs(newFavs); // update favs
-    // console.log(filters)
-    // if (filters.some(filt => filt.name == "Favorites")) {
-    //   setItems(getFilteredItems([...filters]))
-    // }
   }
 
   const visibleItems = items.map((item, index) => (
-    <ShoeItem key={index} shoe={item} handleFavs={toggleFavs} favState={favs.some(f => f.name == item.name)} />))
+    <ShoeItem key={index} shoe={item} handleFavs={toggleFavs} favState={favs.some(f => f.name == item.name)} items={items} />))
   
 
   function Total() {

@@ -19,11 +19,11 @@ export default function Sort(props) {
                 >
                     <FormControlLabel value="Choice 1"
                         onClick={() => {props.setSortType("rating")}}
-                        control={<Radio />}
+                        control={<Radio color="default" />}
                         label="Popular" color="primary" />
                     <FormControlLabel value="Choice 2"
                         onClick={() => {props.setSortType("price")}}
-                        control={<Radio color="primary" />}
+                        control={<Radio color="default" />}
                         label="Cheapest" />
                 </RadioGroup>
             </FormControl>

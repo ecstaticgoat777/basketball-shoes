@@ -13,7 +13,7 @@ export default function ShoeItem(props) {
             props.favState ? setButtonText("Remove From Favorites") : setButtonText("Add To Favorites")
         }
         maintainFavState();
-      }, [props.favState]);
+      }, [props.favState, props.items]);
     
     
     const changeText = () => {
