@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/basketball-shoes/static/css/main.9e348c75.css",
-    "main.js": "/basketball-shoes/static/js/main.56c5f0db.js",
+    "main.css": "/basketball-shoes/static/css/main.d436e14b.css",
+    "main.js": "/basketball-shoes/static/js/main.7ef752a5.js",
     "index.html": "/basketball-shoes/index.html",
-    "main.9e348c75.css.map": "/basketball-shoes/static/css/main.9e348c75.css.map",
-    "main.56c5f0db.js.map": "/basketball-shoes/static/js/main.56c5f0db.js.map"
+    "main.d436e14b.css.map": "/basketball-shoes/static/css/main.d436e14b.css.map",
+    "main.7ef752a5.js.map": "/basketball-shoes/static/js/main.7ef752a5.js.map"
   },
   "entrypoints": [
-    "static/css/main.9e348c75.css",
-    "static/js/main.56c5f0db.js"
+    "static/css/main.d436e14b.css",
+    "static/js/main.7ef752a5.js"
   ]
 }
