@@ -10,7 +10,7 @@ export default function FilterItem(props) {
         props.filterItems(props.title, props.option);
     };
 
-    // visually deselects checkboxes
+    // visually resets checkboxes
     useEffect(() => {
         const resetFilters = () => {
             if (props.filterList.length == 0) {

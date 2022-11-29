@@ -38,31 +38,6 @@
     box-shadow: 0 2px 20px #eeeeee;
 }
 
-.fav-heading {
-    text-transform: uppercase;
-    font-weight: 700;
-    text-align: center;
-}
-.fav-bar {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Roboto', sans-serif;
-    border: 2.5px solid #000000;
-    border-radius: 10px;
-    box-shadow: 0 2px 20px #eeeeee;
-    margin-left: 2rem;
-    margin-right: 4rem;
-    padding: 1rem;
-    width: 15vw;
-}
-
-.total {
-    display: flex;
-    margin-left: auto;
-    text-transform: uppercase;
-    font-weight: 700;
-}
-
 .reset {
     text-transform: uppercase;
     margin: 1rem;

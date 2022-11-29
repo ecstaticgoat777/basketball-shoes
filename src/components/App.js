@@ -5,9 +5,9 @@ import shoeFilterData from '../assets/filter-group-info.json';
 import '../css/App.css';
 import '../css/Reset.css';
 import ShoeItem from './ShoeItem';
-import FavoritesList from './FavoritesList';
 import Sort from './Sort';
 import FilterCategory from './FilterCategory'
+import Aggregator from './Aggregator';
 
 
 function App() {
@@ -19,29 +19,49 @@ function App() {
   const [sortType, setSortType] = useState("rating"); // default sort by rating/popular
   const [filters, setFilters] = useState([]);
 
-  // for each item, loops through all the filters
-  const getFilteredItems = (newFilters) => {
+  
+  const filterCategory = (newFilters, shoe, c) => {
+    let currentFilters = newFilters.filter(f => {return f.category == c});
+    for (let i=0; i < currentFilters.length; i++) {
+      let f = currentFilters[i];
+      if (f.name.toLowerCase() === "favorites") {
+        if (favs.some(fav => fav.name == shoe.name)) {
+          return true;
+        } 
+        return false;
+      }
+
+      if (shoe[c.toLowerCase()].includes(f.name)) {
+        return true;
+      }
+    }
+    return false;
+  }
+  
+  const getFilteredItems = (newFilters, newCategories) => {
     if(newFilters.length == 0) {return allItems}
     let filteredItems = [];
     allItems.forEach(shoe => {
       let displayItem = true
-      newFilters.forEach(f => {
-        if (f.name.toLowerCase() === "favorites") {
-          if (!favs.some(fav => fav.name == shoe.name))
-            displayItem = false;
-        } else if (!shoe[f.category.toLowerCase()].includes(f.name)) {
-          displayItem = false;
-        }})
+      const res = [];
+      for (let j=0; j < newCategories.length; j++) {
+        let c = newCategories[j];
+        let bool = filterCategory(newFilters, shoe, c);
+        res.push(bool);
+      }
+      if (res.includes(false)) {
+        displayItem = false;
+      }
+
       if (displayItem) {
         filteredItems.push(shoe);
       }
     })
-    //setItems(filteredItems)
     return filteredItems;
   }
 
-  // populates the 'filters' list with {filter name, filter category}
   const filterItems = (category, name) => {
+    // populates the 'filters' list with {filter name, filter category}
     let newFilters = [...filters];
     if (newFilters.length != 0 && newFilters.some(f => f.name == name)) {
       newFilters = newFilters.filter(f => {return f.name !== name});
@@ -49,7 +69,16 @@ function App() {
       newFilters = [...filters, {name, category}];
     }
     setFilters(newFilters);
-    setItems(getFilteredItems(newFilters));
+
+    // update categories
+    let newCategories = []
+    for (let i=0; i < newFilters.length; i++) {
+      let category = newFilters[i].category
+      if (newCategories.length == 0 || !newCategories.includes(category)) {
+          newCategories = [...newCategories, category]
+        }
+    }
+    setItems(getFilteredItems(newFilters, newCategories));
   }
 
   const createFilterCategory = (groupInfo) => {
@@ -101,14 +130,6 @@ function App() {
 
   const visibleItems = items.map((item, index) => (
     <ShoeItem key={index} shoe={item} handleFavs={toggleFavs} favState={favs.some(f => f.name == item.name)} items={items} />))
-  
-
-  function Total() {
-    if (favs.length != 0) {
-      return <h2>Total: ${total.toFixed(2)}</h2>
-    }
-  }
-
 
 const reset = () => {
   setFilters([]);
@@ -136,20 +157,9 @@ const reset = () => {
           </div>
 
           <div>
-            <div className="fav-bar">
-              <div className="fav-heading">
-                <h2>Favorites</h2>
-              </div>
-                <FavoritesList favList={favs}/>
-                <br/>
-                <div className="total">
-                  <Total/>
-                </div>
-              </div>
+            <Aggregator favs={favs} total={total}/>
           </div>
       </div>
-
-
       </div>
     </div>
   );

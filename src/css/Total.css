@@ -1,0 +1,6 @@
+.total {
+    display: flex;
+    margin-left: auto;
+    text-transform: uppercase;
+    font-weight: 700;
+}
