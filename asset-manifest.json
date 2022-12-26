@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.css": "/faizaanvidhani.github.io/sneaker-central/static/css/main.d436e14b.css",
-    "main.js": "/faizaanvidhani.github.io/sneaker-central/static/js/main.7ef752a5.js",
-    "index.html": "/faizaanvidhani.github.io/sneaker-central/index.html",
-    "main.d436e14b.css.map": "/faizaanvidhani.github.io/sneaker-central/static/css/main.d436e14b.css.map",
-    "main.7ef752a5.js.map": "/faizaanvidhani.github.io/sneaker-central/static/js/main.7ef752a5.js.map"
+    "main.css": "/sneaker-central/static/css/main.d436e14b.css",
+    "main.js": "/sneaker-central/static/js/main.7ef752a5.js",
+    "index.html": "/sneaker-central/index.html",
+    "main.d436e14b.css.map": "/sneaker-central/static/css/main.d436e14b.css.map",
+    "main.7ef752a5.js.map": "/sneaker-central/static/js/main.7ef752a5.js.map"
   },
   "entrypoints": [
     "static/css/main.d436e14b.css",
