@@ -1,7 +1,9 @@
 # Development
 
 ### Link to Deployed Website
-`https://faizaanvidhani.github.io/sneaker-central
+https://faizaanvidhani.github.io/sneaker-central
+
+An interactive interface that allows shoe enthusiasts to explore and select their favorite kicks.
 
 ### Goal and Value of the Application
 This application serves to help users find their favorite shoes by providing mechanisms for sorting (by rating and price) and filtering (by gender, brand, sport, and color).
